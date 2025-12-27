@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wave Music Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand bg-dark navbar-dark px-4">
+  <a class="navbar-brand fw-bold" href="#">Wave</a>
+  <div class="navbar-nav ms-auto">
+    <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <a class="nav-link" href="#">Discover</a>
+    <a class="nav-link" href="#">Library</a>
+    <a class="nav-link" href="#">Favorites</a>
+  </div>
+</nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="container mt-4 mb-5">
+
+  <!-- Featured Albums -->
+  <section aria-labelledby="featured-albums">
+    <h5 id="featured-albums" class="text-white mb-3">Featured Albums</h5>
+
+    <div class="row g-3">
+      <!-- Album Card 1 -->
+      <div class="col-6 col-md-3">
+        <button class="album-card-btn" aria-label="Play album Retro Vinyl by DJ Nova">
+          <div class="card album-card">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&h=500&fit=crop"
+                 alt="Retro vinyl album cover">
+            <div class="card-body text-center text-white">
+              <h6 class="mb-0">Retro Vinyl</h6>
+              <small class="text-secondary">DJ Nova</small>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Album Card 2 -->
+      <div class="col-6 col-md-3">
+        <button class="album-card-btn" aria-label="Play album Studio Mic by Audio Lab">
+          <div class="card album-card">
+            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500&h=500&fit=crop"
+                 alt="Studio microphone album cover">
+            <div class="card-body text-center text-white">
+              <h6 class="mb-0">Studio Mic</h6>
+              <small class="text-secondary">Audio Lab</small>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Album Card 3 -->
+      <div class="col-6 col-md-3">
+        <button class="album-card-btn" aria-label="Play album EDM Lights by Pulse">
+          <div class="card album-card">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=500&fit=crop"
+                 alt="DJ EDM lights album cover">
+            <div class="card-body text-center text-white">
+              <h6 class="mb-0">EDM Lights</h6>
+              <small class="text-secondary">Pulse</small>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Album Card 4 -->
+      <div class="col-6 col-md-3">
+        <button class="album-card-btn" aria-label="Play album Indie Calm by Luna">
+          <div class="card album-card">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&h=500&fit=crop"
+                 alt="Calm indie music album cover">
+            <div class="card-body text-center text-white">
+              <h6 class="mb-0">Indie Calm</h6>
+              <small class="text-secondary">Luna</small>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Tracks -->
+  <section aria-labelledby="popular-tracks" class="mt-5">
+    <h5 id="popular-tracks" class="text-white mb-3">Popular Tracks</h5>
+
+    <table class="table table-dark table-hover align-middle">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Artist</th>
+          <th scope="col">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">01</th>
+          <td>Midnight Drive</td>
+          <td>DJ Nova</td>
+          <td>3:58</td>
+        </tr>
+        <tr>
+          <th scope="row">02</th>
+          <td>Electric Sky</td>
+          <td>Pulse</td>
+          <td>4:12</td>
+        </tr>
+        <tr>
+          <th scope="row">03</th>
+          <td>Deep Ocean</td>
+          <td>Luna</td>
+          <td>3:44</td>
+        </tr>
+        <tr>
+          <th scope="row">04</th>
+          <td>Neon Nights</td>
+          <td>DJ Nova</td>
+          <td>4:01</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<!-- ================= BOTTOM PLAYER ================= -->
+<footer class="player-bar fixed-bottom bg-black text-white px-4 py-3">
+  <div class="d-flex align-items-center justify-content-between">
+
+    <!-- Song Info -->
+    <div class="d-flex align-items-center gap-3">
+      <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=300&h=300&fit=crop"
+           alt="Now playing album cover"
+           class="player-cover">
+      <div>
+        <div class="fw-bold">Midnight Drive</div>
+        <small class="text-secondary">DJ Nova</small>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="d-flex align-items-center gap-4 player-controls">
+      <button class="control-btn" aria-label="Previous track">
+        <i class="bi bi-skip-backward-fill"></i>
+      </button>
+
+      <button class="control-btn play-btn" aria-label="Play or pause">
+        <i class="bi bi-play-circle-fill"></i>
+      </button>
+
+      <button class="control-btn" aria-label="Next track">
+        <i class="bi bi-skip-forward-fill"></i>
+      </button>
+    </div>
+
+    <!-- Volume -->
+    <div>
+      <button class="control-btn" aria-label="Volume control">
+        <i class="bi bi-volume-up-fill"></i>
+      </button>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
